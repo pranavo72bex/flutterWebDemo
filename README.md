@@ -1,3 +1,2 @@
-# E-Course-Dashboard-App-UI
+# flutterWebApp
 
-![Preview of the app](https://github.com/KumarArab/E-Course-Dashboard-App-UI/blob/master/thumb.png?raw=true)
