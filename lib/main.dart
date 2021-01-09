@@ -371,18 +371,22 @@ class Home extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        height: _width * 0.007,
+                        height: _width * 0.002,
                       ),
                       Row(
                         children: [
                           Button(
                             text: "Call to Action ",
                           ),
-                          Spacer(),
+                          SizedBox(
+                            width: _width * 0.02,
+                          ),
                           Buttons(
                             text: "Support",
                           ),
-                          Spacer()
+                          SizedBox(
+                            width: _width * 0.003,
+                          ),
                         ],
                       ),
                       Container(
@@ -412,7 +416,7 @@ class Home extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: _width * 0.003,
                             ),
                             Text(
                               "FeatherWebs Inc",
@@ -427,11 +431,15 @@ class Home extends StatelessWidget {
                                   color: Colors.grey[700],
                                   fontWeight: FontWeight.normal),
                             ),
-                            SizedBox(height: 5),
-                            Button(
-                              text: "Main button ",
+                            SizedBox(
+                              height: _width * 0.002,
                             ),
-                            SizedBox(height: 5),
+                            Button(
+                              text: "Main button",
+                            ),
+                            SizedBox(
+                              height: _width * 0.003,
+                            ),
                             Text(
                               "Date of Registration",
                               style: TextStyle(
@@ -447,7 +455,7 @@ class Home extends StatelessWidget {
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
-                              height: 10,
+                              height: _width * 0.003,
                             ),
                             Row(
                               children: [
@@ -458,7 +466,7 @@ class Home extends StatelessWidget {
                                   backgroundColor: Colors.transparent,
                                 ),
                                 SizedBox(
-                                  height: 15,
+                                  height: _width * 0.003,
                                 ),
                                 Column(
                                   children: [
@@ -561,247 +569,3 @@ class Home extends StatelessWidget {
     ));
   }
 }
-
-// class RecentNote extends StatelessWidget {
-//   final String title, subtitle;
-//   final String time;
-//   final IconData icon;
-//   final Color color;
-//   final String date;
-//   RecentNote(
-//       {this.color, this.icon, this.subtitle, this.title, this.time, this.date});
-//   @override
-//   Widget build(BuildContext context) {
-//     double _width = MediaQuery.of(context).size.width;
-
-//     return Container(
-//       padding: EdgeInsets.all(_width * 0.001),
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.start,
-//         children: [
-//           NotesIcons(
-//             color: color,
-//             icon: icon,
-//           ),
-//           Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               Text(
-//                 title,
-//                 style: GoogleFonts.mukta(
-//                   fontWeight: FontWeight.normal,
-//                   color: Colors.black,
-//                   fontSize: _width * 0.008,
-//                 ),
-//               ),
-//               Row(
-//                 children: [
-//                   Text(
-//                     date,
-//                     style: GoogleFonts.mukta(
-//                       fontWeight: FontWeight.normal,
-//                       color: Colors.grey[900],
-//                       fontSize: _width * 0.007,
-//                     ),
-//                   ),
-//                   SizedBox(
-//                     width: 10,
-//                   ),
-//                   Text(
-//                     time,
-//                     style: GoogleFonts.mukta(
-//                       fontWeight: FontWeight.normal,
-//                       color: Colors.grey[900],
-//                       fontSize: _width * 0.006,
-//                     ),
-//                   ),
-//                 ],
-//               )
-//             ],
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-// class DocumentsDetail extends StatefulWidget {
-//   @override
-//   _DocumentsDetailState createState() => _DocumentsDetailState();
-// }
-
-// class _DocumentsDetailState extends State<DocumentsDetail> {
-//   @override
-//   Widget build(BuildContext context) {
-//     double _width = MediaQuery.of(context).size.width;
-//     return Container(
-//       padding: EdgeInsets.only(left: 10, right: 10),
-//       child: Row(
-//         children: [
-//           Icon(
-//             Icons.check_box_outlined,
-//             color: Colors.black,
-//             size: _width * 0.017,
-//           ),
-//           SizedBox(
-//             width: _width * 0.003,
-//           ),
-//           Icon(
-//             Icons.folder_open_outlined,
-//             color: Colors.black,
-//             size: _width * 0.017,
-//           ),
-//           SizedBox(
-//             width: _width * 0.005,
-//           ),
-//           Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               Text(
-//                 "myDocument",
-//                 style: TextStyle(
-//                   fontSize: _width * 0.009,
-//                 ),
-//               ),
-//               Text(
-//                 "open 13 weeks ago",
-//                 style: TextStyle(
-//                     fontSize: _width * 0.007, color: Colors.grey[700]),
-//               ),
-//             ],
-//           ),
-//           Spacer(),
-//           Buttons(
-//             text: "Upload",
-//           ),
-//           SizedBox(
-//             width: _width * 0.005,
-//           ),
-//           Buttons(
-//             text: "Download",
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-// class NotesIcons extends StatelessWidget {
-//   final Color color;
-//   final IconData icon;
-//   NotesIcons({this.color, this.icon});
-//   @override
-//   Widget build(BuildContext context) {
-//     double _width = MediaQuery.of(context).size.width;
-
-//     return Container(
-//       height: _width * 0.03,
-//       width: _width * 0.03,
-//       decoration: BoxDecoration(
-//         color: color.withOpacity(0.5),
-//         borderRadius: BorderRadius.circular(_width * 0.008),
-//       ),
-//       child: Icon(
-//         icon,
-//         color: color,
-//         size: _width * 0.02,
-//       ),
-//     );
-//   }
-// }
-
-// class Button extends StatelessWidget {
-//   final String text;
-//   Button({this.text});
-//   @override
-//   Widget build(BuildContext context) {
-//     double _width = MediaQuery.of(context).size.width;
-//     return Container(
-//       height: _width * 0.025,
-//       width: _width * 0.08,
-//       decoration: BoxDecoration(
-//         color: Colors.blue,
-//         borderRadius: BorderRadius.circular(_width * 0.008),
-//       ),
-//       alignment: Alignment.center,
-//       child: Text(text,
-//           style: GoogleFonts.mukta(
-//               color: Colors.white,
-//               fontSize: _width * 0.009,
-//               fontWeight: FontWeight.w700)),
-//     );
-//   }
-// }
-
-// class Buttons extends StatelessWidget {
-//   final String text;
-//   Buttons({this.text});
-//   @override
-//   Widget build(BuildContext context) {
-//     double _width = MediaQuery.of(context).size.width;
-//     return Container(
-//       height: _width * 0.025,
-//       width: _width * 0.08,
-//       decoration: BoxDecoration(
-//           color: Colors.white,
-//           borderRadius: BorderRadius.circular(
-//             _width * 0.008,
-//           ),
-//           border: Border.all(color: Colors.blue)),
-//       alignment: Alignment.center,
-//       child: Text(text,
-//           style: GoogleFonts.mukta(
-//               color: Colors.blue,
-//               fontSize: _width * 0.009,
-//               fontWeight: FontWeight.bold)),
-//     );
-//   }
-// }
-
-// class MenuItem extends StatelessWidget {
-//   final IconData icon;
-//   final String title;
-//   final bool isSelected;
-//   MenuItem({this.icon, this.title, this.isSelected});
-//   @override
-//   Widget build(BuildContext context) {
-//     double _width = MediaQuery.of(context).size.width;
-//     return Container(
-//       height: _width * 0.015,
-//       child: Row(
-//         children: [
-//           SizedBox(
-//             width: _width * 0.025,
-//           ),
-//           Icon(
-//             icon,
-//             size: _width * 0.018,
-//             color: isSelected ? Colors.blue : Colors.grey,
-//           ),
-//           SizedBox(
-//             width: _width * 0.01,
-//           ),
-//           Text(
-//             title,
-//             style: GoogleFonts.mukta(
-//               fontSize: _width * 0.010,
-//               color: isSelected ? Colors.blue : Colors.grey,
-//               fontWeight: FontWeight.w700,
-//             ),
-//           ),
-//           Spacer(),
-//           isSelected
-//               ? Container(
-//                   width: _width * 0.003,
-//                   height: _width * 0.03,
-//                   decoration: BoxDecoration(
-//                     color: Color(0xfff4f5fc),
-//                     borderRadius: BorderRadius.circular(100),
-//                   ),
-//                 )
-//               : Container()
-//         ],
-//       ),
-//     );
-//   }
-// }
