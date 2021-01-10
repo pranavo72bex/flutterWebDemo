@@ -434,9 +434,6 @@ class Home extends StatelessWidget {
                             SizedBox(
                               height: _width * 0.002,
                             ),
-                            Button(
-                              text: "Main button",
-                            ),
                             SizedBox(
                               height: _width * 0.003,
                             ),
@@ -484,7 +481,11 @@ class Home extends StatelessWidget {
                                           fontWeight: FontWeight.normal),
                                     ),
                                   ],
-                                )
+                                ),
+                                Spacer(),
+                                Button(
+                                  text: "Main button",
+                                ),
                               ],
                             )
                           ],
@@ -492,8 +493,9 @@ class Home extends StatelessWidget {
                       ),
                       Container(
                         width: _width * 0.22,
+                        height: _width * 0.21,
                         decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: Colors.grey[500].withOpacity(0.5),
                             borderRadius: BorderRadius.circular(15)),
                         padding: EdgeInsets.all(5),
                         child: Column(

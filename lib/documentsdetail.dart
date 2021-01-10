@@ -12,7 +12,7 @@ class _DocumentsDetailState extends State<DocumentsDetail> {
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     return Container(
-      padding: EdgeInsets.only(left: 10, right: 10),
+      padding: EdgeInsets.only(left: 3, right: 3),
       child: Row(
         children: [
           Icon(
