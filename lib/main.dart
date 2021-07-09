@@ -2,11 +2,11 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'RecentNote.dart';
-import 'button.dart';
-import 'buttons.dart';
-import 'documentsdetail.dart';
-import 'menu_item.dart';
+import 'components/RecentNote.dart';
+import 'components/button.dart';
+import 'components/buttons.dart';
+import 'components/documentsdetail.dart';
+import 'components/menu_item.dart';
 
 void main() {
   runApp(MyApp());
@@ -524,8 +524,7 @@ class Home extends StatelessWidget {
                             RecentNote(
                               color: Colors.blue,
                               icon: Icons.edit,
-                              title:
-                                  " Fragrances can often reflect our mood and personality",
+                              title: " Fragrances can often reflect our mood ",
                               subtitle: "Advanced",
                               time: " 9:07",
                               date: " 18/10/2019",
